@@ -20,15 +20,15 @@ const header = () => {
                         <a href="" className="ml-10"><p>회원가입</p></a>
                         <a href="" className="ml-10"><p>기업서비스</p></a>
                     </div>
-                </div>
-                    <div className="flex mt-7 font-bold text-lg">
-                        <a href="" className="ml-6"><p>{categories[0]}</p></a>
-                        <a href="" className="ml-20"><p>{categories[1]}</p></a>
-                        <a href="" className="ml-20"><p>{categories[2]}</p></a>
-                        <a href="" className="ml-20"><p>{categories[3]}</p></a>
-                        <a href="" className="ml-20"><p>{categories[4]}</p></a>
                     </div>
-                <div>
+                        <div className="flex mt-7 font-bold text-lg">
+                            <a href="" className="ml-6"><p>{categories[0]}</p></a>
+                            <a href="" className="ml-20"><p>{categories[1]}</p></a>
+                            <a href="" className="ml-20"><p>{categories[2]}</p></a>
+                            <a href="" className="ml-20"><p>{categories[3]}</p></a>
+                            <a href="" className="ml-20"><p>{categories[4]}</p></a>
+                        </div>
+                    <div>
 
                 </div>
             </div>
