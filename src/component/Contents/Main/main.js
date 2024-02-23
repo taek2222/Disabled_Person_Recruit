@@ -118,7 +118,7 @@ const Main = () => {
                     {disableTypes.map((disableType, index) => (
                         <SwiperSlide>
                             <div key={index} className="flex justify-center mb-10">
-                                <div className="w-[300px] h-[300px] border-2 border-slate-400 flex items-center justify-center rounded-3xl shadow-md">
+                                <div className="w-[300px] h-[300px] border-2 border-slate-400 bg-slate-50 flex items-center justify-center rounded-3xl shadow-md">
                                     
                                 </div>
                             </div>
