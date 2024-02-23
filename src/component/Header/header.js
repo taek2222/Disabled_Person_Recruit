@@ -1,10 +1,23 @@
-import React from "react";
+import React, {useState} from "react";
 
 import goodjob from "../../image/header/goodjob.png";
 import search from "../../image/header/search.png";
+import HeaderDetail from "./header_detail";
 
-const header = () => {
-    const categories = ["채용정보", "인재정보", "기업•연봉", "커뮤니티", "AI pick"];
+const Header = ({ setActiveMainContent }) => {
+    const categories = ["채용정보", "인재정보", "기업 • 연봉", "커뮤니티", "AI pick"];
+    const components = ["Main", "", "", "", "AI"];
+    const [isCategoryOpen, setIsCategoryOpen] = useState(false);
+    const [selectedCategory, setSelectedCategory] = useState(categories[0]);
+
+    const handleCategoryToggle = () => {
+        setIsCategoryOpen(!isCategoryOpen);
+    };
+
+    const handleCategoryClick = (category) => {
+        setSelectedCategory(category);
+        setActiveMainContent(components[categories.indexOf(category)])
+    };
 
     return (
         <header className="sticky top-0 w-full bg-white z-10">
@@ -16,25 +29,40 @@ const header = () => {
                         <img src={search} alt="search" className="w-10 h-10 hover:cursor-pointer" />
                     </div>
                     <div className="flex mt-7 font-bold">
-                        <a href="" className="ml-24"><p>로그인</p></a>
-                        <a href="" className="ml-10"><p>회원가입</p></a>
-                        <a href="" className="ml-10"><p>기업서비스</p></a>
+                        <p className="ml-24 hover:cursor-pointer">로그인</p>
+                        <p className="ml-10 hover:cursor-pointer">회원가입</p>
+                        <p className="ml-10 hover:cursor-pointer">기업서비스</p>
                     </div>
                     </div>
                         <div className="flex mt-7 font-bold text-lg">
-                            <a href="" className="ml-6"><p>{categories[0]}</p></a>
-                            <a href="" className="ml-20"><p>{categories[1]}</p></a>
-                            <a href="" className="ml-20"><p>{categories[2]}</p></a>
-                            <a href="" className="ml-20"><p>{categories[3]}</p></a>
-                            <a href="" className="ml-20"><p>{categories[4]}</p></a>
+                            {categories.map((category, index) => (
+                                <p 
+                                    key={index}
+                                    className={`${index > 0 ? 'ml-24' : 'ml-6'} ${selectedCategory === category ? 'text-blue-600' : 'text-black'} hover:text-blue-600 hover:cursor-pointer`}
+                                    onMouseEnter={handleCategoryToggle}
+                                    onClick={() => {
+                                        handleCategoryClick(category);
+                                    }}
+                                >
+                                    {category}
+                                </p>
+                            ))}
                         </div>
                     <div>
 
                 </div>
             </div>
             <div className="w-full h-px bg-gray-400 mt-5"></div>
+            {isCategoryOpen && (
+                    <div
+                        className="absolute left-0 right-0 bg-white border border-gray-300 rounded-md shadow-lg"
+                        onMouseLeave={() => setIsCategoryOpen(false)}
+                    >
+                        <HeaderDetail />
+                    </div>
+            )}
         </header>
     )
 }
 
-export default header;
+export default Header;
