@@ -41,13 +41,14 @@ const Main = () => {
                                 <SwiperSlide>
                                     <div key={index} className="justify-center mb-8">
                                         <div className="w-[250px] h-[250px] ml-1 p-3 border-2 text-sm font-bold items-center justify-center rounded-3xl shadow-md hover:shadow-lg">
-                                            <p className="mt-3 text-zinc-600">{disableType.company}</p>
+                                            <img src={disableType.iconURL} alt={`logo${index}`} className="h-9" />
+                                            <p className="mt-3 text-zinc-500">{disableType.company}</p>
                                             <p className="mt-3">{disableType.title}</p>
-                                            <div className="flex mt-5 font-semibold">
-                                                <p className="text-yellow-800 p-2 shadow-lg bg-yellow-200 rounded-full">{disableType.salary}</p>
-                                                <p className="ml-3 text-red-800 p-2 shadow-lg bg-red-200 rounded-full">{disableType.type}</p>
+                                            <div className="flex mt-3 text-xs font-semibold">
+                                                <p className="text-yellow-800 p-2 shadow-md hover:shadow-lg bg-yellow-200 rounded-md">{disableType.salary}</p>
+                                                <p className="ml-3 text-red-800 p-2 shadow-md hover:shadow-lg bg-red-200 rounded-md">{disableType.type}</p>
                                             </div>
-                                            <p className="fixed bottom-12 ml-[185px] w-16 text-blue-600">{disableType.deadline}</p>
+                                            <p className={`fixed bottom-12 ml-[190px] w-16 ${disableType.deadline <= 10 ? 'text-red-500' : 'text-blue-600'}`}>D-{disableType.deadline}</p>
                                         </div>
                                     </div>
                                 </SwiperSlide>
