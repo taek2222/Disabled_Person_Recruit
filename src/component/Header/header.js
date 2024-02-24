@@ -47,9 +47,9 @@ const Header = ({ setActiveMainContent }) => {
                                     {category}
                                 </p>
                             ))}
+                            <a href="http://localhost:8080"><p className="ml-[510px] text-blue-600 hover:cursor-pointer">기업용 굿잡 바로가기</p></a>
                         </div>
                     <div>
-
                 </div>
             </div>
             <div className="w-full h-px bg-gray-400 mt-5"></div>

@@ -5,52 +5,12 @@ import 'swiper/css/scrollbar';
 import { Scrollbar } from 'swiper/modules';
 
 import chat from '../../../image/content/chat.png';
+import disableTypes from './disableTypesData';
 
 const Main = () => {
     const info_categories = ["장애유형별 공고", "지역별 공고", "직업별 공고", "오늘의 HOT 기업", "AI 기업 매칭", "장애인고용장려금"];
     const [selectedCategory, setSelectedCategory] = useState(info_categories[0]);
-    const disableTypes = [
-        {
-            type: '청각 장애인',
-            title: '제목',
-            content: '내용',
-        },
-        {
-            type: '시각 장애인',
-            title: '제목',
-            content: '내용',
-        },
-        {
-            type: '청각 장애인',
-            title: '제목',
-            content: '내용',
-        },
-        {
-            type: '시각 장애인',
-            title: '제목',
-            content: '내용',
-        },
-        {
-            type: '청각 장애인',
-            title: '제목',
-            content: '내용',
-        },
-        {
-            type: '시각 장애인',
-            title: '제목',
-            content: '내용',
-        },
-        {
-            type: '청각 장애인',
-            title: '제목',
-            content: '내용',
-        },
-        {
-            type: '시각 장애인',
-            title: '제목',
-            content: '내용',
-        },
-    ];
+    
 
     const handleCategoryClick = (category) => {
         setSelectedCategory(category);
@@ -79,9 +39,15 @@ const Main = () => {
                         >
                             {disableTypes.map((disableType, index) => (
                                 <SwiperSlide>
-                                    <div key={index} className="flex justify-center mb-8">
-                                        <div className="w-[250px] h-[250px] border-2 flex items-center justify-center rounded-3xl shadow-md">
-                                            
+                                    <div key={index} className="justify-center mb-8">
+                                        <div className="w-[250px] h-[250px] ml-1 p-3 border-2 text-sm font-bold items-center justify-center rounded-3xl shadow-md hover:shadow-lg">
+                                            <p className="mt-3 text-zinc-600">{disableType.company}</p>
+                                            <p className="mt-3">{disableType.title}</p>
+                                            <div className="flex mt-5 font-semibold">
+                                                <p className="text-yellow-800 p-2 shadow-lg bg-yellow-200 rounded-full">{disableType.salary}</p>
+                                                <p className="ml-3 text-red-800 p-2 shadow-lg bg-red-200 rounded-full">{disableType.type}</p>
+                                            </div>
+                                            <p className="fixed bottom-12 ml-[185px] w-16 text-blue-600">{disableType.deadline}</p>
                                         </div>
                                     </div>
                                 </SwiperSlide>
@@ -118,7 +84,7 @@ const Main = () => {
                     {disableTypes.map((disableType, index) => (
                         <SwiperSlide>
                             <div key={index} className="flex justify-center mb-10">
-                                <div className="w-[300px] h-[300px] border-2 border-slate-400 bg-slate-50 flex items-center justify-center rounded-3xl shadow-md">
+                                <div className="w-[300px] h-[300px] border-2 border-slate-400 bg-slate-50 items-center justify-center rounded-3xl shadow-md hover:shadow-lg">
                                     
                                 </div>
                             </div>

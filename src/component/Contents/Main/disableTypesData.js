@@ -1,0 +1,88 @@
+const disableTypes = [
+    {
+        type: '청각 장애인',
+        company: '주식회사 케이비손해보험',
+        title: 'KB 손해보험 8시간 근무 청약서심사직원 채용',
+        salary: '207만원',
+        deadline: 'D-20',
+    },
+    {
+        type: '관계없음',
+        company: '법무법인(유한) 화우',
+        title: '[법무법인(유한) 화우][법무법인 화우] 문서수발직 장애인 직원 채용(채용시 마감)',
+        salary: '103만원',
+        deadline: 'D-13',
+    },
+    {
+        type: '청각 장애인',
+        company: '주식회사 케이비손해보험',
+        title: 'KB 손해보험 8시간 근무 청약서심사직원 채용',
+        salary: '103만원',
+        deadline: 'D-20',
+    },
+    {
+        type: '청각 장애인',
+        company: '주식회사 케이비손해보험',
+        title: 'KB 손해보험 8시간 근무 청약서심사직원 채용',
+        salary: '103만원',
+        deadline: 'D-20',
+    },
+    {
+        type: '청각 장애인',
+        company: '주식회사 케이비손해보험',
+        title: 'KB 손해보험 8시간 근무 청약서심사직원 채용',
+        salary: '103만원',
+        deadline: 'D-20',
+    },
+    {
+        type: '청각 장애인',
+        company: '주식회사 케이비손해보험',
+        title: 'KB 손해보험 8시간 근무 청약서심사직원 채용',
+        salary: '103만원',
+        deadline: 'D-20',
+    },
+    {
+        type: '청각 장애인',
+        company: '주식회사 케이비손해보험',
+        title: 'KB 손해보험 8시간 근무 청약서심사직원 채용',
+        salary: '103만원',
+        deadline: 'D-20',
+    },
+    {
+        type: '청각 장애인',
+        company: '주식회사 케이비손해보험',
+        title: 'KB 손해보험 8시간 근무 청약서심사직원 채용',
+        salary: '103만원',
+        deadline: 'D-20',
+    },
+    {
+        type: '청각 장애인',
+        company: '주식회사 케이비손해보험',
+        title: 'KB 손해보험 8시간 근무 청약서심사직원 채용',
+        salary: '103만원',
+        deadline: 'D-20',
+    },
+    {
+        type: '청각 장애인',
+        company: '주식회사 케이비손해보험',
+        title: 'KB 손해보험 8시간 근무 청약서심사직원 채용',
+        salary: '103만원',
+        deadline: 'D-20',
+    },
+    {
+        type: '청각 장애인',
+        company: '주식회사 케이비손해보험',
+        title: 'KB 손해보험 8시간 근무 청약서심사직원 채용',
+        salary: '103만원',
+        deadline: 'D-20',
+    },
+    {
+        type: '청각 장애인',
+        company: '주식회사 케이비손해보험',
+        title: 'KB 손해보험 8시간 근무 청약서심사직원 채용',
+        salary: '103만원',
+        deadline: 'D-20',
+    },
+];
+
+export default disableTypes;
